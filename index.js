@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-        user: "niru90x@gmail.com",
+        user: "rakibx270@gmail.com",
         pass: process.env.APP_PASSWORD,
     },
 });
@@ -23,12 +23,20 @@ const transporter = nodemailer.createTransport({
 // API endpoint
 app.post("/send-email", async (req, res) => {
     const { from_name, from_email, message } = req.body;
+    
+    // const mailOptions = {
+    //     from: from_email,
+    //     to: "rakibx270@gmail.com",
+    //     subject: `Message from ${from_name}`,
+    //     text: message,
+    // };
 
-    const mailOptions = {
-        from: from_email,
-        to: "niru90x@gmail.com",
+     const mailOptions = {
+        from: "rakibx270@gmail.com",
+        to: "rakibx270@gmail.com",
         subject: `Message from ${from_name}`,
-        text: message,
+        text: `senderName: ${from_name} || senderEmail: ${from_email} || sesnderMessage: ${message}`,
+        replyTo: from_email
     };
 
     try {
@@ -38,7 +46,7 @@ app.post("/send-email", async (req, res) => {
         console.error(error);
         res.status(500).json({ error: "Failed to send email" });
     }
-});
+})
 
 app.get('/', async (req, res) => {
     res.send({ message: 'deploy success' });
@@ -46,4 +54,4 @@ app.get('/', async (req, res) => {
 
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
-});
+})
