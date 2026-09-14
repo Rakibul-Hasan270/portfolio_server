@@ -11,7 +11,7 @@ const ProjectShowcase = () => {
             tech: ["React.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS", "Tanstack Query", "JWT"],
             client: "https://github.com/Rakibul-Hasan270/zestora-restaurant-client",
             server: "https://github.com/Rakibul-Hasan270/zestora-restaurant-server",
-            live: "https://zestora-restaurant-new.web.app"
+            live: "https://zestora-restaurant-client.vercel.app"
         },
         {
             title: "Fund Flow",
@@ -21,7 +21,7 @@ const ProjectShowcase = () => {
             tech: ["React.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS", "Stripe JS", "Firebase"],
             client: "https://github.com/Rakibul-Hasan270/FundFlow_PDL_client",
             server: "https://github.com/Rakibul-Hasan270/FundFlow_PDL_server",
-            live: "https://public-donation-list.web.app"
+            live: "https://fund-flow-pdl-client.vercel.app"
         },
         {
             title: "Site Network",
@@ -29,9 +29,9 @@ const ProjectShowcase = () => {
             badge: "NextGent Project",
             image: "https://i.ibb.co/wXfcJjt/client-09-11-2026-04-55-PM.png",
             tech: ["React.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS", "Stripe JS", "Firebase"],
-            client: "https://github.com/nextgentdev-bot/site-network-client",
-            server: "https://github.com/nextgentdev-bot/site-network-server",
-            live: "https://site-network-client.vercel.app/"
+            client: "https://github.com/Rakibul-Hasan270/site_network_client",
+            server: "https://github.com/Rakibul-Hasan270/site_network_server",
+            live: "https://site-network-client.vercel.app"
         }
     ];
 
@@ -63,11 +63,10 @@ const ProjectShowcase = () => {
                                 ></div>
 
                                 {/* Project Tag Badge */}
-                                <span className={`absolute top-2.5 right-2.5 text-xs px-3 py-1 rounded-full font-medium shadow-md ${
-                                    project.badge === "NextGent Project"
-                                        ? "bg-gradient-to-r from-pink-800 to-indigo-800 text-white border border-pink-400/40"
-                                        : "bg-slate-900/90 text-pink-300 border border-pink-800/70"
-                                }`}>
+                                <span className={`absolute top-2.5 right-2.5 text-xs px-3 py-1 rounded-full font-medium shadow-md ${project.badge === "NextGent Project"
+                                    ? "bg-gradient-to-r from-pink-800 to-indigo-800 text-white border border-pink-400/40"
+                                    : "bg-slate-900/90 text-pink-300 border border-pink-800/70"
+                                    }`}>
                                     {project.badge}
                                 </span>
                             </div>
